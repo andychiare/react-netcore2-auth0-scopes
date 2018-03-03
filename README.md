@@ -1,0 +1,1 @@
+# react-netcore2-auth0-scopes
