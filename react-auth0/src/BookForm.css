@@ -1,0 +1,24 @@
+.formContainer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-50 {
+    float: left;
+    width: 40%;
+    margin-top: 6px;
+    text-align: right;
+}
+
+input[type=text] {
+    width: 50%;
+}
