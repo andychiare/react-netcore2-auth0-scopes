@@ -15,8 +15,15 @@ class Home extends React.Component {
         "Accept": "application/json",
         "Authorization": `Bearer ${accessToken}`
     })})
-        .then(response => response.json())
-        .then(books => this.setState({bookList: books}))
+        .then(response => {
+          if (response.ok) {
+            return response.json()
+          }
+          if (response.status === 403) {
+            alert("You are not authorized!")
+          }          
+        })
+        .then(books => this.setState({bookList: books || []}))
         .catch(error => console.log(error))
   }
 
