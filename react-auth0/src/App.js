@@ -38,7 +38,7 @@ class App extends Component {
   }
 
   render() {
-	let logoutButton =  this.createLogoutButton();
+	const logoutButton =  this.createLogoutButton();
 	
     return (
       <div className="App">

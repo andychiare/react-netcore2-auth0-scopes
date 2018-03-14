@@ -28,8 +28,8 @@ class Home extends React.Component {
   }
 
   render() {
-    let bookList = this.state.bookList.map((book) => <li><i>{book.author}</i> - <h3>{book.title}</h3></li>);
-    let addBookButton = this.props.auth.hasScopes(["write:books"])? <Link to="/bookForm">Add a book</Link> : null;
+    const bookList = this.state.bookList.map((book) => <li><i>{book.author}</i> - <h3>{book.title}</h3></li>);
+    const addBookButton = this.props.auth.hasScopes(["write:books"])? <Link to="/bookForm">Add a book</Link> : null;
 
     return  <div>
               {addBookButton}
